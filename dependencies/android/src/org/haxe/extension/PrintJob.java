@@ -8,6 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.support.v4.print.PrintHelper;
+import android.graphics.BitmapFactory;
+import android.graphics.Bitmap;
 
 
 /* 
@@ -43,6 +46,14 @@ public class PrintJob extends Extension {
 		
 		return inputValue * 100;
 		
+	}
+	
+	public static void printBitmap(String path, String id){
+		
+		PrintHelper photoPrinter = new PrintHelper(mainActivity);
+		photoPrinter.setScaleMode(PrintHelper.SCALE_MODE_FIT);
+		Bitmap bitmap = BitmapFactory.decodeFile(path);
+		photoPrinter.printBitmap("Volvic - " + id, bitmap);
 	}
 	
 	

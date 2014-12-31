@@ -1,11 +1,11 @@
 #ifndef PRINTJOB_H
 #define PRINTJOB_H
-
+#include <string>
 
 namespace printjob {
 	
 	
-	int SampleMethod(int inputValue);
+	int PrintBitmap(const char* path, const char* id);
 	
 	
 }

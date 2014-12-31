@@ -15,13 +15,12 @@ using namespace printjob;
 
 
 
-static value printjob_sample_method (value inputValue) {
+static value printjob_print_bitmap (const char* path, const char* id) {
 	
-	int returnValue = SampleMethod(val_int(inputValue));
-	return alloc_int(returnValue);
+	PrintBitmap(path, id);
 	
 }
-DEFINE_PRIM (printjob_sample_method, 1);
+DEFINE_PRIM (printjob_print_bitmap, 1);
 
 
 

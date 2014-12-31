@@ -1,12 +1,12 @@
 #include "Utils.h"
-
+#include <string>
 
 namespace printjob {
 	
 	
-	int SampleMethod(int inputValue) {
+	int PrintBitmap(const char* path, const char* id) {
 		
-		return inputValue * 100;
+		printf(path);
 		
 	}
 	
