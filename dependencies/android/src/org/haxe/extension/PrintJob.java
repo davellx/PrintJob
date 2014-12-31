@@ -42,13 +42,7 @@ import android.graphics.Bitmap;
 public class PrintJob extends Extension {
 	
 	
-	public static int sampleMethod (int inputValue) {
-		
-		return inputValue * 100;
-		
-	}
-	
-	public static void printBitmap(String path, String id){
+	public static void printBitmapFile(String path, String id){
 		
 		PrintHelper photoPrinter = new PrintHelper(mainActivity);
 		photoPrinter.setScaleMode(PrintHelper.SCALE_MODE_FIT);
