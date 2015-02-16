@@ -11,7 +11,9 @@ haxelib git PrintJob https://github.com/davellx/PrintJob.git
 
 ##Use
 
+```
 add PrintJob in haxelib, have an image to print.
+```
 
 Then :
 
