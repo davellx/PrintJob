@@ -11,6 +11,8 @@ import android.view.View;
 import android.support.v4.print.PrintHelper;
 import android.graphics.BitmapFactory;
 import android.graphics.Bitmap;
+import android.net.Uri;
+import java.io.File;
 
 
 /* 
@@ -48,6 +50,15 @@ public class PrintJob extends Extension {
 		photoPrinter.setScaleMode(PrintHelper.SCALE_MODE_FIT);
 		Bitmap bitmap = BitmapFactory.decodeFile(path);
 		photoPrinter.printBitmap("Volvic - " + id, bitmap);
+	}
+	
+	public static void printBitmapFileBluetooth(String path, String type){
+		
+		Intent i = new Intent(Intent.ACTION_SEND);
+		i.setType(type);
+		File file = new File(path);
+		i.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file)); 
+		mainActivity.startActivity(Intent.createChooser(i, "Send Image"));
 	}
 	
 	
